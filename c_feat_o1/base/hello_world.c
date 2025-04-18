@@ -1,10 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 
 struct Person
 {
     int id;
     char name[50];
 };
+
+void init_person(struct Person *p, int id, const char *name)
+{
+    p->id = id;
+    snprintf(p->name, sizeof(p->name), "%s", name);
+}
+
+void print_person(struct Person *p)
+{
+    printf("ID: %d, Name: %s\n", p->id, p->name);
+}
 
 typedef struct Point
 {
@@ -33,5 +45,10 @@ int main()
 
     p1.print(&p1);
     p2.print(&p2);
+
+    struct Person person1;
+    person1.id = 1;
+    strcpy(person1.name, "Alice");
+    printf("Person 1: ID = %d, Name = %s\n", person1.id, person1.name);
     return 0;
 }
