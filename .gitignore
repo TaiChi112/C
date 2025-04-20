@@ -1,0 +1,46 @@
+# Object files
+**/*.o
+**/*.obj
+
+# Compiled binary files
+**/*.exe
+**/*.out
+**/*.a
+**/*.so
+**/*.dll
+**/*.dylib
+
+# Debug files
+**/*.dSYM/
+**/*.stackdump
+**/core
+
+# Build directories
+**/build/
+**/bin/
+**/dist/
+**/Debug/
+**/Release/
+
+# Makefile/Compiler artifacts
+**/Makefile
+**/CMakeCache.txt
+**/CMakeFiles/
+**/cmake_install.cmake
+**/compile_commands.json
+
+# IDE/editor config
+**/.vscode/
+**/.idea/
+**/*.code-workspace
+
+# Backup & temporary files
+**/*~
+**/#*#
+**/.#*
+**/*.swp
+**/*.swo
+**/.DS_Store
+
+# Logs
+**/*.log
