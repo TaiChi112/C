@@ -5,25 +5,25 @@
 - oop with c
 - Object-Oriented C (OOC)
 
-จะ implement polymorphism เต็มรูปแบบใน C ได้ยังไง?
+- จะ implement polymorphism เต็มรูปแบบใน C ได้ยังไง?
 
-จะ design struct ให้รองรับ inheritance ลึก 2-3 ชั้นได้ยังไง?
+- จะ design struct ให้รองรับ inheritance ลึก 2-3 ชั้นได้ยังไง?
 
-จะ integrate กับ system C แบบมี plugin (dynamic method table) ยังไง?
+- จะ integrate กับ system C แบบมี plugin (dynamic method table) ยังไง?
 
-ขยายระบบ	เพิ่มชนิดสัตว์ใหม่ได้โดยไม่แตะ base (Open/Closed principle) <!--concept oop in c-->
+- ขยายระบบ	เพิ่มชนิดสัตว์ใหม่ได้โดยไม่แตะ base (Open/Closed principle) <!--concept oop in c-->
 
-what is vtable in c
+- what is vtable in c
 
-ถ้าอยากเก็บหลายชนิดไว้ใน array เดียวกัน จะต้องใช้ pointer + cast ยังไง?
+- ถ้าอยากเก็บหลายชนิดไว้ใน array เดียวกัน จะต้องใช้ pointer + cast ยังไง?
 
-จะเขียน factory function ให้สร้าง object แต่ละชนิดแบบ abstract ยังไง?
+- จะเขียน factory function ให้สร้าง object แต่ละชนิดแบบ abstract ยังไง?
 
-แล้วเราจะใช้ function pointer แบบนี้สร้าง “vtable” แบบ C++ ได้ไหม?
+- แล้วเราจะใช้ function pointer แบบนี้สร้าง “vtable” แบบ C++ ได้ไหม?
 
-ถ้าเราทำ struct inheritance 2 ชั้น จะจัดการ pointer ยังไงให้ถูก type?
+- ถ้าเราทำ struct inheritance 2 ชั้น จะจัดการ pointer ยังไงให้ถูก type?
 
-จะใช้ macro หรือ typedef ช่วยลด verbosity ได้ยังไง?
+- จะใช้ macro หรือ typedef ช่วยลด verbosity ได้ยังไง?
 
 | ด้าน            | มีพื้นฐาน Information Management    | ไม่มีพื้นฐาน                     |
 | -------------- | -------------------------------- | ---------------------------- |
