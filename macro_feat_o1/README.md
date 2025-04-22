@@ -31,3 +31,11 @@ inline int max(int a, int b) {
 ```
 - → ป้องกันปัญหาเวลานำไปใช้ใน if/else โดยไม่ต้องใส่ {}
 
+## 🔄 4. Macro แบบ conditional (platform dependent)
+```
+#ifdef _WIN32
+    #define CLEAR_SCREEN system("cls")
+#else
+    #define CLEAR_SCREEN system("clear")
+#endif
+```
