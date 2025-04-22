@@ -12,3 +12,10 @@
 - ถ้าต้อง build แบบ release และ debug แยก binary ได้ไหม?
 - ถ้าต้อง link กับไลบรารีอย่าง -lm หรือ -lpthread จะเพิ่มยังไง?
 - ถ้าต้อง build test case แยก จะจัดการ makefile ยังไง?
+
+## 🧭 หัวข้อที่เกี่ยวข้อง (สำคัญ)
+- Makefile function: wildcard, patsubst, foreach, filter-out
+- Dependency Management: .d files, -MMD
+- Multiple Build Targets: debug, release
+- Testing Automation: unit test, integration test
+- Makefile Structure: pattern rules, automatic variables
