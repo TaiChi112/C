@@ -53,3 +53,30 @@ MAKE_FUNC(login)   // สร้าง void login_handler() { ... }
 #define SHOW(x) printf(#x " = %d\n", x)
 SHOW(count)  // จะกลายเป็น printf("count = %d\n", count)
 ```
+
+## 🧙‍♂️ 6. X Macro Pattern (ขั้นเทพ ใช้สร้าง enum/function อัตโนมัติ)
+- ใช้ list เดียวกันสร้าง enum, string, function ได้
+```
+// Step 1: define macro list
+#define OPERATION_LIST \
+    X(ADD) \
+    X(SUBTRACT) \
+    X(MULTIPLY) \
+    X(DIVIDE)
+
+// Step 2: สร้าง enum
+#define X(op) OP_##op,
+typedef enum { OPERATION_LIST } Operation;
+#undef X
+
+// Step 3: สร้างชื่อ
+#define X(op) #op,
+const char* operation_names[] = { OPERATION_LIST };
+#undef X
+
+// Step 4: สร้าง handler function
+#define X(op) void handle_##op() { printf("Handling "#op"\n"); }
+OPERATION_LIST
+#undef X
+```
+- 🔥 ใช้ได้ดีเมื่อมีการ “จัดกลุ่มข้อมูลซ้ำหลายที่”
