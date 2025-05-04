@@ -1,6 +1,4 @@
-#include <iostream>
 #include <stdlib.h>
-using namespace std;
 
 typedef struct Person
 {
@@ -12,10 +10,7 @@ typedef struct Person
 Person *constructor(const char *name, int age)
 {
     Person *p = (Person *)malloc(sizeof(Person));
-    if (p == nullptr)
-    {
-        return nullptr;
-    }
+    
     p->name = name;
     p->age = age;
     return p;
@@ -26,8 +21,9 @@ int getAge(struct Person *p)
 }
 void display(struct Person *p)
 {
-    cout << "Name: " << p->name << ", Age: " << p->age << endl;
-}
+    printf("Name: %s\n", p->name);
+    printf("Age: %d\n", p->age);
+    printf("Size of Person struct: %zu bytes\n", sizeof(Person));}
 int main()
 {
     Person *p = constructor("John Doe", 30);
@@ -37,7 +33,7 @@ int main()
 
     Person *p2 = constructor("Jane Doe", 25);
     p2->getAge = getAge;
-    cout << "Age: " << p2->getAge(p2) << endl;
+    printf("Age of %s: %d\n", p2->name, p2->getAge(p2));
     p2->display = display;
     p2->display(p2);
     free(p2);
